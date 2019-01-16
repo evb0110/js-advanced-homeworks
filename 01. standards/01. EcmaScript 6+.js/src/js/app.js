@@ -18,4 +18,4 @@ const calculateBonus = (starts, percent, prices) => {
 let result = calculateBonus(bonusStarts, bonusPercent, prices);
 result = Math.round(result);
 
-console.log(result);
+console.log(`Размер бонуса: ${result}`);
