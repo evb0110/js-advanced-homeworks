@@ -4,14 +4,14 @@
 
 var pointsArray = [74989, 74990, 74990, 62000, 58480, 61800];
 
-var pointsArraySorted = pointsArray.sort(function(a, b) {
+var pointsArraySorted = pointsArray.sort(function cmpNum(a, b) {
   return b - a;
 });
 
 var winnerPoints = pointsArraySorted[0];
 
 var medallistAverage =
-  pointsArraySorted.slice(0, 3).reduce(function(a, b) {
+  pointsArraySorted.slice(0, 3).reduce(function sum(a, b) {
     return a + b;
   }) / 3;
 
