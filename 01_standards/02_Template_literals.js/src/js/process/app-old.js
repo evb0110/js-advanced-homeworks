@@ -19,19 +19,11 @@ const ending = number => {
   return result;
 };
 
-const createFormatter = endingFunction => (strings, number) =>
-  `${strings[0]}${number}${strings[1] + endingFunction(number)}`;
-
-const formatter = createFormatter(ending);
-
 pointsArray.forEach(number => {
   try {
-    const string = formatter`Ваш баланс: ${number} балл`;
+    const string = `Ваш баланс: ${number} балл${ending(number)}`;
     console.log(string);
   } catch (err) {
     console.error(err);
   }
 });
-
-// on Tagged Templates see
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates
