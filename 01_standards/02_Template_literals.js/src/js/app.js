@@ -20,7 +20,7 @@ const ending = number => {
 };
 
 const createFormatter = endingFunction => (strings, number) =>
-  `${strings[0]}${number}${strings[1] + endingFunction(number)}`;
+  `${strings[0]}${number}${strings[1]}${endingFunction(number)}`;
 
 const formatter = createFormatter(ending);
 
